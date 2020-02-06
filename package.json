@@ -49,7 +49,7 @@
         "pretty-quick": "^2.0.1"
     },
     "prettier": {
-        "printWidth": 80,
+        "printWidth": 100,
         "tabWidth": 4,
         "useTabs": false,
         "semi": false,
