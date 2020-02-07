@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+
 import Confirm from './Confirm'
 
 interface IState {
@@ -68,20 +68,19 @@ class App extends React.Component<{}, IState> {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                </header>
                 <p>{this.state.confirmMessage}</p>
                 {this.state.confirmVisible && (
                     <button onClick={this.handleConfirmClick}>Open Modal</button>
                 )}
-                <Confirm
-                    open={this.state.confirmOpen}
-                    title="A confirm modal"
-                    content="Are you sure?"
-                    onOkClick={this.handleOkClick}
-                    onCancelClick={this.handleCancelClick}
-                />
+                {this.state.countDown > 0 && (
+                    <Confirm
+                        open={this.state.confirmOpen}
+                        title="A confirm modal"
+                        content="Are you sure?"
+                        onOkClick={this.handleOkClick}
+                        onCancelClick={this.handleCancelClick}
+                    />
+                )}
             </div>
         )
     }

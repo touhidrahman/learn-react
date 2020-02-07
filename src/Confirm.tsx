@@ -14,6 +14,12 @@ interface IProps {
 const Confirm: React.SFC<IProps> = (props) => {
     const [cancelClickCount, setCancelClickCount] = React.useState(0)
 
+    React.useEffect(() => {
+        return () => {
+            return
+        }
+    }, [])
+
     const handleOkClick = () => {
         props.onOkClick()
     }
@@ -51,4 +57,5 @@ Confirm.defaultProps = {
     okCaption: 'OK',
 }
 
-export default Confirm
+const ConfirmMemoized = React.memo(Confirm)
+export default ConfirmMemoized
