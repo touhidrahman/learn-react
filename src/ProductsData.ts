@@ -5,7 +5,7 @@ export interface IProduct {
     price: number
 }
 
-export const Products: IProduct[] = [
+export const products: IProduct[] = [
     {
         id: 1,
         name: 'A',

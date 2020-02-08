@@ -3,4 +3,8 @@ import ReactDOM from 'react-dom'
 import Routes from './Routes'
 import './index.css'
 
-ReactDOM.render(<Routes />, document.getElementById('root') as HTMLElement)
+import * as serviceWorker from './serviceWorker'
+
+ReactDOM.render(<Routes />, document.getElementById('root'))
+
+serviceWorker.unregister()
