@@ -1,12 +1,13 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Header from './Header'
-import Home from './Home'
+import Header from './features/Header'
 import Checkout from './Checkout';
 import Login from './Login';
 import {useEffect} from 'react';
 import {useStateValue} from './StateProvider'
 import {auth} from './firebase-config'
+import HomePage from './pages/HomePage';
+import TimerPage from './pages/TimerPage';
 
 function App() {
   const [state, dispatch] = useStateValue();
@@ -42,8 +43,7 @@ function App() {
         </Route>
 
         <Route path="/">
-          <Header />
-          <Home />
+          <TimerPage />
         </Route>
       </Switch>
     </div>

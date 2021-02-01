@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
-import {useStateValue} from './StateProvider'
+import {useStateValue} from '../StateProvider'
 
 const c = {
     header: 'flex justify-between bg-black w-full text-white',
